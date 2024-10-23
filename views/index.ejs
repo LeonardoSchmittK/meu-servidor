@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello, world</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <style>
+      h1 {
+        transition: 100ms linear all;
+        animation: popupText ease-in 1000ms forwards;
+        position: relative;
+      }
+
+      @keyframes popupText {
+        from {
+          transform: translate(0, 120px);
+          opacity: 0;
+        }
+        50% {
+          transform: translate(0, 13px);
+          opacity: 0.5;
+        }
+        to {
+          transform: translate(0, 20px);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body class="h-screen w-full flex items-center justify-center bg-slate-100">
+    <h1 class="text-2xl text-slate-500 text-center">Olá, <%= nome %></h1>
+  </body>
+</html>
